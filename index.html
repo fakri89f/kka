@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="layout">
+            <div class="banner">
+                <div class="section lebar">
+                    <h1>Ujian Praktik Koding</h1>
+                    <p>Panduan lengkap ujian praktik menggunakan ESP32 dengan
+                        PictoBlox — mulai dari kontrol LED, Servo,
+                        Sensor Ultrasonik, hingga Bluetooth. Ikuti setiap
+                        tahapan dengan teliti dan pastikan rangkaian
+                        sesuai skema.</p>
+                    <div>
+                        <a class="btn" href="#alat">Alat</a>
+                        <a class="btn" href="#praktik">Materi</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="alat" class="lebar">
+                <h1 class="sub-judul">Alat & Bahan yang Dibutuhkan</h1>
+                <p class="sub-text">Siapkan semua komponen berikut sebelum
+                    memulai praktik. Pastikan semua alat dalam
+                    kondisi baik dan kabel tidak putus.</p>
+                <div class="card-layout">
+                    <div class="card">
+                        <img src="gmbr/esp32.jpg" alt>
+                        <div class="card-content">
+                            <h3>ESP32</h3>
+                            <p>Mikrokontroler utama dengan WiFi & Bluetooth
+                                terintegrasi. Gunakan kabel USB untuk
+                                menghubungkan ke komputer.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="gmbr/led.jpg" alt>
+                        <div class="card-content">
+                            <h3>LED</h3>
+                            <p>LED kecil yang dapat diaktifkan dan dimatikan
+                                melalui mikrokontroler. Sambungkan ke pin
+                                digital pada ESP32.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="gmbr/SERVO.jpg" alt>
+                        <div class="card-content">
+                            <h3>Servo Motor</h3>
+                            <p>Servo mini dengan sudut putar 0°–180°. Sambungkan
+                                ke pin PWM pada ESP32.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="gmbr/HCSE04.jpg" alt>
+                        <div class="card-content">
+                            <h3>Sensor Ultrasonik</h3>
+                            <p>Sensor pengukur jarak menggunakan gelombang
+                                suara. Memiliki 4 pin: VCC, GND, Trig, Echo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="setting" class="lebar">
+                <h1>Setting ESP32 di Windows dengan PictoBlox</h1>
+
+                <div class="step">
+                    <h2>1. Install Driver ESP32</h2>
+                    <p>Install driver sesuai chip USB:</p>
+                    <ul>
+                        <li>CP2102<a style="margin-left: 1rem;"
+                                href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers">Download</a></li>
+                        <li>CH340</li>
+                    </ul>
+                    <div class="note">
+                        Tujuan: agar ESP32 terbaca sebagai COM Port di Windows
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h2>2. Cek Port COM</h2>
+                    <ol>
+                        <li>Hubungkan ESP32 ke laptop</li>
+                        <li>Buka <b>Device Manager</b></li>
+                        <li>Lihat bagian <code>Ports (COM & LPT)</code></li>
+                    </ol>
+                    <p>Contoh:</p>
+                    <code>USB to UART Bridge (COM3)</code>
+                </div>
+
+                <div class="step">
+                    <h2>3. Install PictoBlox</h2>
+                    <p>Download dan install PictoBlox dari website resminya.</p>
+                </div>
+
+                <div class="step">
+                    <h2>4. Tambahkan Board ESP32</h2>
+                    <ol>
+                        <li>Buka PictoBlox</li>
+                        <li>Klik <b>Board → Add Extension</b></li>
+                        <li>Cari <b>ESP32</b></li>
+                        <li>Klik <b>Add</b></li>
+                    </ol>
+                </div>
+
+                <div class="step">
+                    <h2>5. Setting Board dan Port</h2>
+                    <ul>
+                        <li>Board: ESP32</li>
+                        <li>Port: sesuai COM (contoh COM3)</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h2>6. Gunakan Upload Mode</h2>
+                    <p>Pilih <b>Upload Mode</b> agar program tersimpan di
+                        ESP32.</p>
+                </div>
+
+                <div class="step">
+                    <h2>7. Test LED</h2>
+                    <p>Gunakan GPIO 2 untuk LED built-in (umumnya pada
+                        ESP32).</p>
+                </div>
+
+                <div class="step">
+                    <h2>8. Jika Gagal Upload</h2>
+                    <ul>
+                        <li>Tekan tombol <b>BOOT</b> saat upload</li>
+                        <li>Gunakan kabel data</li>
+                        <li>Pastikan driver sudah terinstall</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h2>Tips</h2>
+                    <div class="tips">
+                        <ul>
+                            <li>Gunakan kabel pendek</li>
+                            <li>Tutup aplikasi lain seperti Arduino</li>
+                            <li>Pastikan board tidak rusak</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="lebar">
+                <h1>WIRING DAN PINOUT</h1>
+                <div class="img-flex">                    
+                        <img src="gmbr/wiring.JPG" alt="">    
+                        <img src="gmbr/PIOUNT.JPG" alt="">                                        
+                    <div class="wiring-content">
+                        <h2>Konfigurasi Pin (Disarankan)</h2>
+                        <ul>
+                            <li>LED 1 → GPIO 19</li>
+                            <li>LED 2 → GPIO 21</li>
+                            <li>Ultrasonik Sensor
+                            <ul>
+                                <li>TRIG → GPIO 5 </li>
+                                <li>ECHO → GPIO 18 </li>
+                            </ul>
+                            </li>
+                            <li>Servo → GPIO 13 </li>
+                        </ul>
+                    </div>               
+                </div>
+                
+            </div>
+
+            <div id="praktik" class="lebar">
+                <h1 class="sub-judul">Materi</h1>
+                <p class="sub-text">Ikuti langkah-langkah berikut untuk
+                    menyelesaikan praktik. Pastikan setiap langkah
+                    dilakukan dengan benar untuk hasil yang optimal.</p>
+                <div class="card-prak">
+                    <div class="cardp">
+                        <h3>1. Kontrol LED</h3>
+                        <img src="gmbr/kodeled.JPG" alt>
+                        <p>Pada tahap pertama, kamu akan belajar menyalakan
+                            dan mematikan LED menggunakan perintah blok
+                            di PictoBlox. Coba buat LED berkedip setiap 1
+                            detik sebagai latihan dasar.
+                        </p>
+                        <a href="#" class="btn1">Pelajari</a>
+                    </div>
+
+                    <div class="cardp">
+                        <h3>2. Kontrol Servo</h3>
+                        <img src="gmbr/kodeservo.JPG" alt>
+                        <p>Sambungkan servo ke pin PWM gpio 22 ESP32. Buat
+                            program untuk memutar servo ke sudut 0°, 90°,
+                            dan 180° dengan jeda 2 detik.</p>
+                        <a href="#" class="btn1">Pelajari</a>
+                    </div>
+
+                    <div class="cardp">
+                        <h3>3. Sensor Ultrasonik</h3>
+                        <img src="gmbr/ultrasonik sensor.JPG" alt>
+                        <p>Hubungkan sensor ultrasonik ke pin VCC, GND, Trig
+                            (gpio 23), dan Echo (gpio 19) ESP32. Buat
+                            program untuk mengukur jarak dan tampilkan
+                            hasilnya di serial monitor.</p>
+                        <a href="#" class="btn1">Pelajari</a>
+                    </div>
+                    <div class="cardp">                       
+                        <h3>4. Bluetooth</h3>
+                        <img src="gmbr/bluetooth led.JPG" alt>                      
+                            <p>Pilih ekstensi ESP32 Bluetooth pada menu ekstensi PictoBlox.Hubungkan smartphone ke ESP32 melalui pengaturan Bluetooth. Cari nama "ESP32-BT". Gunakan aplikasi Bluetooth Terminal, kirim karakter seperti "1" untuk nyalakan LED dan "0" untuk mematikan.</p>
+                            <a href="#" class="btn1">Pelajari</a>                        
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
