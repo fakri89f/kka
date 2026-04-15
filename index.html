@@ -25,6 +25,111 @@
                 </div>
             </div>
 
+            <div class="container">
+
+<!-- TATA TERTIB -->
+<div class="card-praktik">
+    <h2>📋 Tata Tertib Ujian Praktik</h2>
+    <ul>
+        <li>Hadir 15 menit sebelum ujian</li>
+        <li>Memakai seragam lengkap</li>
+        <li>Dilarang mencontek atau bekerja sama</li>
+        <li>Menggunakan alat yang disediakan</li>
+        <li>Waktu ujian 45 menit</li>
+        <li>Wajib mengikuti semua tahap</li>
+        <li>Setelah selesai, rapikan alat</li>
+    </ul>
+</div>
+
+<!-- PROSEDUR -->
+<div class="card-praktik">
+    <h2>⚙️ Prosedur Pelaksanaan</h2>
+    <p><b>Persiapan:</b> Menyiapkan alat dan menempati tempat.</p>
+    <p><b>Pelaksanaan:</b></p>
+    <ul>
+        <li>Tahap 1: LED</li>
+        <li>Tahap 2: Ultrasonic</li>
+        <li>Tahap 3: Servo</li>
+        <li>Tahap 4: Bluetooth</li>
+    </ul>
+    <p><b>Penilaian:</b> Dilakukan langsung oleh penguji.</p>
+</div>
+
+<!-- TEKNIS ASESMEN -->
+<div class="card-praktik">
+    <h2>📝 Teknis Asesmen</h2>
+    <ul>
+        <li>Penilaian kinerja (praktik langsung)</li>
+        <li>Penilaian produk (program)</li>
+        <li>Observasi sikap</li>
+    </ul>
+    <p><b>Pembobotan:</b></p>
+    <ul>
+        <li>Tahap 1: 20%</li>
+        <li>Tahap 2: 20%</li>
+        <li>Tahap 3: 20%</li>
+        <li>Tahap 4: 25%</li>
+        <li>Umum: 15%</li>
+    </ul>
+</div>
+
+<!-- MATERI -->
+<div class="card-praktik">
+    <h2>📚 Materi Ujian</h2>
+    <ul>
+        <li>Dasar pemrograman (looping & IF)</li>
+        <li>Output digital (LED)</li>
+        <li>Sensor ultrasonic</li>
+        <li>Servo motor</li>
+        <li>Bluetooth</li>
+    </ul>
+</div>
+
+<!-- KISI-KISI -->
+<div class="card-praktik">
+    <h2>📊 Kisi-Kisi Penilaian</h2>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Kompetensi</th>
+            <th>Indikator</th>
+            <th>Skor</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Output Digital</td>
+            <td>LED berkedip</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Sensor</td>
+            <td>Membaca jarak</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Servo</td>
+            <td>Gerak sesuai kondisi</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Bluetooth</td>
+            <td>Kirim data</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Sikap</td>
+            <td>Kerapian & stabilitas</td>
+            <td>15</td>
+        </tr>
+    </table>
+</div>
+
+</div>
+
             <div id="alat" class="lebar">
                 <h1 class="sub-judul">Alat & Bahan yang Dibutuhkan</h1>
                 <p class="sub-text">Siapkan semua komponen berikut sebelum
@@ -41,7 +146,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="gmbr/led.jpg" alt>
+                        <img src="gmbr/ledlampu.jpg" alt>
                         <div class="card-content">
                             <h3>LED</h3>
                             <p>LED kecil yang dapat diaktifkan dan dimatikan
@@ -167,7 +272,7 @@
                                 <li>ECHO → GPIO 18 </li>
                             </ul>
                             </li>
-                            <li>Servo → GPIO 13 </li>
+                            <li>Servo → GPIO 25 </li>
                         </ul>
                     </div>               
                 </div>
@@ -204,7 +309,7 @@
                         <h3>3. Sensor Ultrasonik</h3>
                         <img src="gmbr/ultrasonik sensor.JPG" alt>
                         <p>Hubungkan sensor ultrasonik ke pin VCC, GND, Trig
-                            (gpio 23), dan Echo (gpio 19) ESP32. Buat
+                            (gpio 5), dan Echo (gpio 18) ESP32. Buat
                             program untuk mengukur jarak dan tampilkan
                             hasilnya di serial monitor.</p>
                         <a href="#" class="btn1">Pelajari</a>

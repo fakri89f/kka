@@ -198,6 +198,72 @@ gap:2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.card-praktik{
+    background:white;
+    border-radius:16px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-praktik h2{
+    margin-top:0;
+    color:#2c3e50;
+}
+
+.card-praktik ul{
+    padding-left:20px;
+}
+
+.card-praktik table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+.card-praktik table, th, td{
+    border:1px solid #ddd;
+}
+
+.card-praktik th, td{
+    padding:10px;
+    text-align:left;
+}
+
+.card-praktik th{
+    background:#3498db;
+    color:white;
+}
+
+.btn-link{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 15px;
+    background:#2ecc71;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.card-praktik{
+    line-height:1.5;
+}
+.card-praktik ul,
+.card-praktik p
+{
+    margin-left: 2.5rem;
+}
+
+
+
+
 @media screen and (max-width: 700px){
 .img-flex{
     flex-wrap: wrap;
