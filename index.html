@@ -44,7 +44,7 @@
 <!-- PROSEDUR -->
 <div class="card-praktik">
     <h2>⚙️ Prosedur Pelaksanaan</h2>
-    <p><b>Persiapan:</b> Menyiapkan alat dan menempati tempat.</p>
+    <p><b>Persiapan:</b>membagi siswa menjadi 6 kelompok, Menyiapkan alat dan menempati tempat.</p>
     <p><b>Pelaksanaan:</b></p>
     <ul>
         <li>Tahap 1: LED</li>
@@ -53,6 +53,67 @@
         <li>Tahap 4: Bluetooth</li>
     </ul>
     <p><b>Penilaian:</b> Dilakukan langsung oleh penguji.</p>
+    <h2>📅 Jadwal Sesi Ujian Praktik</h2>
+<table>
+<tr>
+<th>Sesi</th>
+<th>Mulai</th>
+<th>Selesai</th>
+<th>Jumlah Siswa</th>
+<th>Keterangan</th>
+</tr>
+
+<tr><td>1</td><td>07.00</td><td>07.40</td><td>6</td><td>Ujian</td></tr>
+<tr><td>2</td><td>07.45</td><td>08.25</td><td>6</td><td>Ujian</td></tr>
+<tr><td>3</td><td>08.30</td><td>09.10</td><td>6</td><td>Ujian</td></tr>
+<tr><td>4</td><td>09.15</td><td>09.55</td><td>6</td><td>Ujian</td></tr>
+<tr><td>-</td><td>09.55</td><td>10.10</td><td>-</td><td>Istirahat</td></tr>
+<tr><td>5</td><td>10.10</td><td>10.50</td><td>6</td><td>Ujian</td></tr>
+<tr><td>6</td><td>10.55</td><td>11.35</td><td>6</td><td>Ujian</td></tr>
+</table>
+<br>
+
+<h2>⏱️ Timeline Ujian (40 Menit)</h2>
+<table>
+<tr>
+<th>Menit</th>
+<th>Kegiatan</th>
+<th>Penjelasan</th>
+</tr>
+
+<tr><td>0–5</td><td>Persiapan</td><td>Setup ESP32 & PictoBlox</td></tr>
+<tr><td>5–12</td><td>LED</td><td>Tahap 1</td></tr>
+<tr><td>12–20</td><td>Servo</td><td>Tahap 2</td></tr>
+<tr><td>20–28</td><td>Ultrasonik</td><td>Tahap 3</td></tr>
+<tr><td>28–36</td><td>Bluetooth</td><td>Tahap 4</td></tr>
+<tr><td>36–40</td><td>Penutup</td><td>Penilaian & validasi</td></tr>
+</table>
+<br>
+
+<h2>📊 Teknik Penilaian</h2>
+<table>
+<tr>
+<th>Tahap</th>
+<th>Cara Penilaian</th>
+<th>Waktu</th>
+<th>Metode</th>
+</tr>
+
+<tr><td>LED</td><td>ON/OFF</td><td>30 detik</td><td>Observasi</td></tr>
+<tr><td>Ultrasonik</td><td>Uji jarak</td><td>30 detik</td><td>Unjuk kerja</td></tr>
+<tr><td>Servo</td><td>Gerakan</td><td>30 detik</td><td>Unjuk kerja</td></tr>
+<tr><td>Bluetooth</td><td>A/B kontrol</td><td>30–60 detik</td><td>Observasi</td></tr>
+<tr><td>Umum</td><td>Sikap & proses</td><td>-</td><td>Observasi</td></tr>
+</table>
+<br>
+
+<h2>💡 Keterangan Sistem</h2>
+<ul>
+    <li>✔ Siswa angkat tangan saat siap dinilai</li>
+    <li>✔ Guru cek cepat (≤1 menit/siswa)</li>
+    <li>✔ Penilaian dilakukan langsung per tahap (checkpoint)</li>
+    <li>✔ Tidak perlu menunggu semua siswa selesai</li>
+</ul>
 </div>
 
 <!-- TEKNIS ASESMEN -->
@@ -71,6 +132,7 @@
         <li>Tahap 4: 25%</li>
         <li>Umum: 15%</li>
     </ul>
+    
 </div>
 
 <!-- MATERI -->
@@ -293,7 +355,7 @@
                             di PictoBlox. Coba buat LED berkedip setiap 1
                             detik sebagai latihan dasar.
                         </p>
-                        <a href="gmbr/Tutorial Kontrol LED ESP32.pdf" class="btn1">Pelajari</a>
+                        <a href="gmbr/Tutorial Kontrol LED ESP32_fix.pdf" class="btn1">Pelajari</a>
                     </div>
 
                     <div class="cardp">
@@ -302,7 +364,7 @@
                         <p>Sambungkan servo ke pin PWM gpio 25 ESP32. Buat
                             program untuk memutar servo ke sudut 0°, 90°,
                             dan 180° dengan jeda 2 detik.</p>
-                        <a href="gmbr/Tutorial Kontrol Servo ESP32.pdf" class="btn1">Pelajari</a>
+                        <a href="gmbr/Tutorial Kontrol Servo ESP32_fix.pdf" class="btn1">Pelajari</a>
                     </div>
 
                     <div class="cardp">
@@ -312,13 +374,13 @@
                             (gpio 5), dan Echo (gpio 18) ESP32. Buat
                             program untuk mengukur jarak dan tampilkan
                             hasilnya di serial monitor.</p>
-                        <a href="gmbr/Tutorial Sensor Ultrasonik ESP32.pdf" class="btn1">Pelajari</a>
+                        <a href="gmbr/Tutorial Sensor Ultrasonik ESP32_fix.pdf" class="btn1">Pelajari</a>
                     </div>
                     <div class="cardp">                       
                         <h3>4. Bluetooth</h3>
                         <img src="gmbr/bluetooth led.JPG" alt>                      
                             <p>Pilih ekstensi ESP32 Bluetooth pada menu ekstensi PictoBlox.Hubungkan smartphone ke ESP32 melalui pengaturan Bluetooth. Cari nama "ESP32-BT". Gunakan aplikasi Bluetooth Terminal, kirim karakter seperti "1" untuk nyalakan LED dan "0" untuk mematikan.</p>
-                            <a href="gmbr/Tutorial Bluetooth ESP32.pdf" class="btn1">Pelajari</a>                        
+                            <a href="gmbr/Tutorial Bluetooth ESP32_fix.pdf" class="btn1">Pelajari</a>                        
                     </div>
 
                 </div>
